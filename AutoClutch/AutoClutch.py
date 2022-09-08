@@ -17,6 +17,6 @@ def acUpdate(deltaT):
     currentGear = ac.getCarState(0, acsys.CS.Gear)
     
     if currentGear == 1: # neutral
-        VirtualClutch.set_axis(pyvjoy.HID_USAGE_X, 32768) # press clutch
+        VirtualClutch.set_axis(pyvjoy.HID_USAGE_X, 32768) # clutch on
     else:
-        VirtualClutch.set_axis(pyvjoy.HID_USAGE_X, 0) # depress clutch
+        VirtualClutch.set_axis(pyvjoy.HID_USAGE_X, 0) # clutch off
